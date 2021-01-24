@@ -12,6 +12,7 @@ class shibaboard(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("shibaboard")
+        self.resizable(False, False)
 
         # dynamic scaling ? ? ? 
         x = self.winfo_screenwidth()
@@ -52,3 +53,4 @@ class shibaboard(tk.Tk):
 
 while True:
     shibaboard()
+    
