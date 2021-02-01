@@ -13,6 +13,8 @@ class shibaboard(tk.Tk):
         super().__init__()
         self.title("shibaboard")
         self.resizable(False, False)
+        self.ico = ImageTk.PhotoImage(file = "ico.ico")
+        self.iconphoto(False, self.ico)
 
         # dynamic scaling ? ? ? 
         x = self.winfo_screenwidth()
@@ -20,7 +22,7 @@ class shibaboard(tk.Tk):
         self.geometry(f"{x // 4}x{y // 2}")
         self.update()
         
-        # We're getting a link to an image
+        # Getting a link to an image
         self.r = requests.get(url)
         self.json_data = self.r.json()
         self.json_data = json.dumps(self.json_data)
