@@ -42,6 +42,8 @@ class shibaboard(tk.Tk):
         self.menu.add_command(label = "Copy Link", command = lambda:pyperclip.copy(self.json_data))
         self.menu.add_command(label = "Exit", command = lambda:sys.exit(0))
         self.shiba_label.bind("<Button-3>", self.evt)
+        self.shiba_label.bind("<Button-2>", self.evt)
+
 
         self.mainloop()
 
